@@ -1,0 +1,17 @@
+# base configuration
+baseURL: 'https://adrielperkins.dev'
+languageCode: 'en-us'
+title: 'Adriel Perkins - DevOps, Dev, & Tech'
+MetaDataFormat: 'yaml'
+theme: "dev-resume-blog"
+
+
+#  params
+
+params:
+    plugins:
+        js:
+            - link: plugins/typedJS/typed.js
+            - link: js/site.js
+        css:
+            - link: "plugins/css/custom.css"
