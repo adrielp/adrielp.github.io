@@ -8,12 +8,6 @@
         gtag('config', 'UA-137899647-1');
     </script>
     <script async src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <!-- <script async src="https://www.jsdelivr.com/package/npm/bulma"></script> -->
-    <!-- <script async src="https://use.typekit.net/ojp1vxz.css"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> -->
-    <script src="js/site.js"></script>
-    <script src="js/typed.js"></script>
-
 
     {{ "<!-- plugins -->" | safeHTML }}
     {{ range site.Params.plugins.css }}
@@ -24,6 +18,9 @@
     {{ range site.Params.plugins.js }}
     <script async src="{{ .link | absURL }}"></script>
     {{end}}
+
+    {{ "<!-- Favicons --> " | safeHTML }}
+    
   
 
     <meta charset="UTF-8">

@@ -1,10 +1,167 @@
 <!DOCTYPE html>
 <html>
-    {{ partial "head.html" . }}
-<body>
+  {{ partial "head.html" . }}
   {{ partial "header.html" . }}
-  {{ range first 10 .Data.Pages }}
-  <h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
-  {{ end }}
+<body>
+  {{ partial "hero.html" . }}
+
+  <!-- MY STORY SECTION -->
+  {{ if site.Data.homepage.story.enable }}
+  <section id="myStory" class="section has-background-white" style="margin-top: 5%;">
+    <div class="heading has-text-black has-text-centered">
+        <p class="title is-l is-spaced ex-marg ">{{ site.Data.homepage.story.title }}</p>
+    </div>
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column">
+                <p class="has-text-black">{{ site.Data.homepage.story.content_one }}</p>
+            </div>
+            <div class="column">
+                <p class="has-text-black">{{ site.Data.homepage.story.content_three }}</p>
+            </div>
+            <div class="column">
+                <p class="has-text-black">{{ site.Data.homepage.story.content_three }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+<!-- PROJECTS SECTIONS -->
+{{ if site.Data.homepage.projects.enable }}
+<section style="margin-top: 6%;">
+  <div class="h-c-bg ">
+      <div class="heading has-text-centered">
+          <p class="title is-l is-spaced ex-marg has-text-black">Things I've Done</p>
+      </div>
+      <div class="container">
+          <div class="columns is-centered">
+              <div class="column">
+                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p>
+                                      <br />
+                                      Piloted a drone for a "Heart of Appalachia" country music video by singer Kaitlyn Baker.
+                                  </p>
+                              </div>
+                              <nav class="level is-mobile">
+                                  <div class="is-centered">
+                                      <a class="button is-link" href="https://youtu.be/h2BfWyiYvrg">Music Video</a>
+                                  </div>
+                              </nav>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+              <div class="column">
+                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p class="is-small is-centered">
+                                      <br />
+                                      Created an ASP.NET 4.6 E-Commmerce Webstore with a talented team of developers.
+                                  </p>
+                              </div>
+                              <nav class="level is-mobile">
+                                  <div class="level-left">
+                                      <a class="button is-link" href="https://github.com/adrielp/SquawCreek">Github Project Files</a>
+                                  </div>
+                              </nav>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+              <div class="column">
+                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p class="is-small is-centered">
+                                      <br />
+                                      Created this site using .NET Core and deployed using Docker.
+                                      <br />
+                                  </p>
+                              </div>
+                              <nav class="level is-mobile">
+                                  <div class="level-left">
+                                      <a class="button is-link" asp-area="" asp-controller="Home" asp-action="Projects">Other Projects</a>
+                                  </div>
+                              </nav>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="heading has-text-white has-text-centered" style="margin-top: 6%;">
+          <p class="title is-l is-spaced ex-marg has-text-white">Things I'm Working On</p>
+      </div>
+      <div class="container">
+          <div class="columns is-centered">
+              <div class="column">
+                  <div class="box is-background-primary" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p>
+                                      <br />
+                                      Swift iOS Application for personal productivity use.<br /><br />
+                                  </p>
+                              </div>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+              <div class="column">
+                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p class="is-small is-centered">
+                                      <br />
+                                      Adding content & features to this website.<br /> <br />
+                                  </p>
+                              </div>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+              <div class="column">
+                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
+                      <article class="media">
+                          <div class="media-content">
+                              <div class="content">
+                                  <p class="is-small is-centered">
+                                      <br />
+                                      Documenting my process on YouTube & Instagram. <br /> <br />
+                                  </p>
+                              </div>
+                          </div>
+                      </article>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="hero is-large is-bold" style="padding-top:3em; padding-bottom: 5em;">
+    <div class="hero-footer">
+      <div class="container is-centered">
+        <p class="title is-l has-text-white has-text-centered is-centered">Check Out My Other Projects</p>
+        <div class="buttons is-centered">
+          <a class="button is-large is-link has-text-centered is-outlined"> Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <img class="img-fluid edu-bg-image w-100" src="{{`images/education-bg.png`|relURL}}" alt="bg-image"> -->
+</section>
+{{ end }}
+
+
 </body>
+  {{ partial "footer.html" . }}
 </html>

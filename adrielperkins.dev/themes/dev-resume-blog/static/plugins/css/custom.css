@@ -61,9 +61,9 @@ html {
 
 .h-c-bg {
   z-index: 1;
-  background-image: url(/images/hcbg.svg);
+  background-image: url(../../images/education-bg.png);
   background-size: cover;
-  background-position-y: 13.5em;
+  background-position-y: -10em;
   background-position-x: center;
   background-repeat: no-repeat;
   background-color: white !important;
@@ -71,6 +71,10 @@ html {
 
 .bg-none {
   background-color: white !important; }
+
+.img-fluid {
+  max-width:100%;
+  height:auto }
 
 .add-spacing {
   margin-top: 2em;

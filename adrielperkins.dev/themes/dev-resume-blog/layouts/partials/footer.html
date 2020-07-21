@@ -1,0 +1,26 @@
+<footer class="footer">
+    <nav class="level">
+        <div class="level-left is-paddingless">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <p class="level-item has-text-left{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+                <a class="is-link has-text-white" href="{{ .URL }}">{{ .Name }}</a>
+            </p>
+            {{ end }}
+        </div>
+        <!-- social icons -->
+        <div class="level-right columns  ">
+            <div class="column">
+                {{ range site.Params.social }}
+                <span class="icon">
+                    <a class="is-link has-text-white" href="{{ .URL | safeURL }}"><i class="{{ .icon }}"></i></a>
+                </span>
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+
+    <div class="level">
+        <p class="level-item level-left has-text-grey-lighter">&copy; {{ now.Format "2006" }} - {{ site.Params.author }}</p>
+    </div>
+</footer>
