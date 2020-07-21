@@ -17,6 +17,52 @@ story:
 # projects
 projects: 
   enable: true
+  recent: 
+    project_one:
+      enable: true
+      content: "Piloted a drone for a \"Heart of Appalachia\" country music video by singer Kaitlyn Baker."
+      button:
+        enable: true
+        URL: "https://youtu.be/h2BfWyiYvrg"
+        title: "Music Video"
+    project_two:
+      enable: true
+      content: "Created an ASP.NET 4.6 E-Commmerce Webstore with a talented team of developers."
+      button:
+        enable: true
+        URL: "https://github.com/adrielp/SquawCreek"
+        title: "Github Project Files"
+    project_three:
+      enable: true
+      content: "Re-created this site using Hugo (.NET Core got the boot) and deployed using Docker."
+      button:
+        enable: true
+        URL: "/projects"
+        title: "Other Projects"
+  upcoming:
+    project_one:
+      enable: true
+      content: "Swift iOS Application for personal productivity use."
+      button:
+        enable: false
+        URL: "https://youtu.be/h2BfWyiYvrg"
+        title: "Music Video"
+    project_two:
+      enable: true
+      content: "Adding content & features to this website."
+      button:
+        enable: false
+        URL: "https://github.com/adrielp/SquawCreek"
+        title: "Github Project Files"
+    project_three:
+      enable: true
+      content: "Documenting my process on YouTube & Instagram."
+      button:
+        enable: false
+        URL: "/projects"
+        title: "Other Projects"
+
+      
 
 # skill
 skill:
