@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
   {{ partial "head.html" . }}
-  {{ partial "header.html" . }}
 <body>
   {{ partial "hero.html" . }}
 
-  <!-- MY STORY SECTION -->
+  <!-- ABOUT SECTION-->
   {{ if site.Data.homepage.story.enable }}
-  <section id="myStory" class="section has-background-white" style="margin-top: 5%;">
+  <!-- <section id="myStory" class="section has-background-white" style="margin-top: 5%;"> -->
+  <section id="myStory" class="section has-background-white" style="margin-top: 8%;">
     <div class="heading has-text-black has-text-centered">
-        <p class="title is-l is-spaced ex-marg ">{{ site.Data.homepage.story.title }}</p>
+        <h1 class="title">{{ site.Data.homepage.story.title }}</h1>
     </div>
+    {{ with site.Data.homepage.story }}
     <div class="container">
-        <div class="columns is-centered">
-            <div class="column">
-                <p class="has-text-black">{{ site.Data.homepage.story.content_one }}</p>
-            </div>
-            <div class="column">
-                <p class="has-text-black">{{ site.Data.homepage.story.content_three }}</p>
-            </div>
-            <div class="column">
-                <p class="has-text-black">{{ site.Data.homepage.story.content_three }}</p>
-            </div>
-        </div>
+      <p class="has-text-black is-size-5 about-me">
+        {{ .content }}
+      </p>
     </div>
-</section>
-{{ end }}
+    {{ end }}
+    <br></br>
+    <div class="container has-text-centered">
+      <a class="button is-link" href="{{ site.Params.aboutPage | absURL }}">Get to know me!</a>
+    </div>
+  </section>
+  {{ end }}
 
 <!-- PROJECTS SECTIONS -->
 {{ if site.Data.homepage.projects.enable }}

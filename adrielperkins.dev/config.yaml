@@ -4,45 +4,56 @@ languageCode: 'en-us'
 title: 'Adriel Perkins - DevOps, Dev, & Tech'
 MetaDataFormat: 'yaml'
 theme: "dev-resume-blog"
-
-
+author: "Adriel"
 #  params
 
 params:
-    plugins:
-        js:
-            - link: plugins/typedJS/typed.js
-            - link: js/site.js
-        css:
-            - link: "plugins/css/custom.css"
-    copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"
-    logo: images/ap-logo.svg
-    author: "Adriel Perkins"
-    social:
-        - identifier: instagram
-          URL: "https://instagram.com/adrielperkins"
-          icon: "fab fa-1x fa-instagram"
-        - identifier: twitter
-          URL: "https://twitter.com/adrielqp"
-          icon: "fab fa-1x fa-twitter"
-        - identifier: facebook
-          URL: "https://facebook.com/adrielperkins"
-          icon: "fab fa-1x fa-facebook-f"
-        - identifier: github
-          URL: "https://github.com/adrielp"
-          icon: "fab fa-1x fa-github"
-        - identifier: youtube
-          URL: "https://www.youtube.com/channel/UCMvC5sEUUx4U5CsM24Egmhg?view_as=subscriber"
-          icon: "fab fa-1x fa-youtube"
-        - identifier: behance
-          URL: "https://www.behance.net/adrielperkins"
-          icon: "fab fa-1x fa-behance"
-        # - identifier: paypal
-        #   URL: ""
-        #   icon: "fab fa-paypal"
-        # - identifier: patreon
-        #   URL: ""
-        #   icon: "fab fa-patreon"
+  plugins:
+      js:
+          - link: plugins/typedJS/typed.js
+          # - link: jquery-3.5.1.min.js 
+          - link: js/site.js
+      css:
+          - link: "plugins/css/style.css"
+          # - link: "plugins/css/custom.css"
+      sass: 
+          - link: "plugins/sass/bulma.sass"
+  copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"
+  logo: images/ap_logo_white.svg
+  author: "Adriel Perkins"
+  first_name: "Adriel"
+  social:
+      - identifier: instagram
+        URL: "https://instagram.com/adrielperkins"
+        icon: "fab fa-1x fa-instagram"
+      - identifier: twitter
+        URL: "https://twitter.com/adrielqp"
+        icon: "fab fa-1x fa-twitter"
+      - identifier: facebook
+        URL: "https://facebook.com/adrielperkins"
+        icon: "fab fa-1x fa-facebook-f"
+      - identifier: github
+        URL: "https://github.com/adrielp"
+        icon: "fab fa-1x fa-github"
+      - identifier: youtube
+        URL: "https://www.youtube.com/channel/UCMvC5sEUUx4U5CsM24Egmhg?view_as=subscriber"
+        icon: "fab fa-1x fa-youtube"
+      - identifier: behance
+        URL: "https://www.behance.net/adrielperkins"
+        icon: "fab fa-1x fa-behance"
+      # - identifier: paypal
+      #   URL: ""
+      #   icon: "fab fa-paypal"
+      # - identifier: patreon
+      #   URL: ""
+      #   icon: "fab fa-patreon"
+  home: "Home"
+  hero: 
+    - link: images/new-hero.jpg
+  avatar:
+    - link: images/avatar.svg
+  position: "DevOps Engineer | Designer | Brand Strategist"
+  aboutPage: "about"
 
 
 menu:
@@ -51,19 +62,23 @@ menu:
           URL: "/"
           name: "Home"
           weight: 1
+        - identifier: about
+          URL: "about"
+          name: "About"
+          weight: 2
         - identifier: blog
           URL: "blog"
           name: "Blog"
-          weight: 2
+          weight: 3
         - identifier: projects
           URL: "projects"
           name: "Projects"
-          weight: 3
+          weight: 4
         - identifier: resume
           URL: "resume"
           name: "Resume"
-          weight: 4
+          weight: 5
         - identifier: contact
           URL: "contact"
           name: "Contact"
-          weight: 5
+          weight: 6

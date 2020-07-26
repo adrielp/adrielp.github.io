@@ -5,7 +5,8 @@ banner:
 # story
 story:
   enable: true
-  title: "My Story"
+  title: "About Me"
+  content: "By day I engineer automation solutions to increase efficiency between teams. By night, I design brands that engage with their community. And most importantly, I share a wonderful life with my wife and son. "
   content_one: "In 2017, I graduated from College with a BS degree. But, there were so many things yet to learn. This led me to the decision to move forward and teach myself everything I possibly could to fill in the gaps of the current education system and expand my horizons becauseas far as I’m concerned I should never stop learning."
   content_two: "Anything can be taught, anything can be learned, anything can be remembered. That brings me to what I’ve been focusing on learning; business, design, and development. I’ve been developing for a few years, and I still have forever to learn, but I felt like there was something missing. Design. I don’t just mean graphic design, but design in general."
   content_three: "To succeed, strategic design is essential to problem solving. Incorporate development into the entire process and you have quality solutions to modern problems. So I’ve been strategically designing and developing my own life, and everything I learn to expand my horizons and achieve my goals. In addition, I’m documenting my failures, accomplishments, and processes to share with everyone."
