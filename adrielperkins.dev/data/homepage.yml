@@ -7,17 +7,15 @@ story:
   enable: true
   title: "About Me"
   content: "By day I engineer automation solutions to increase efficiency between teams. By night, I design brands that engage with their community. And most importantly, I share a wonderful life with my wife and son. "
-  content_one: "In 2017, I graduated from College with a BS degree. But, there were so many things yet to learn. This led me to the decision to move forward and teach myself everything I possibly could to fill in the gaps of the current education system and expand my horizons becauseas far as I’m concerned I should never stop learning."
-  content_two: "Anything can be taught, anything can be learned, anything can be remembered. That brings me to what I’ve been focusing on learning; business, design, and development. I’ve been developing for a few years, and I still have forever to learn, but I felt like there was something missing. Design. I don’t just mean graphic design, but design in general."
-  content_three: "To succeed, strategic design is essential to problem solving. Incorporate development into the entire process and you have quality solutions to modern problems. So I’ve been strategically designing and developing my own life, and everything I learn to expand my horizons and achieve my goals. In addition, I’m documenting my failures, accomplishments, and processes to share with everyone."
   button:
     enable : true
     label : "know more"
     URL : "about"
 
-# projects
+# projects - content comes from content/projects
 projects: 
   enable: true
+  title: "Recent Projects"
   recent: 
     project_one:
       enable: true
@@ -40,29 +38,11 @@ projects:
         enable: true
         URL: "/projects"
         title: "Other Projects"
-  upcoming:
-    project_one:
-      enable: true
-      content: "Swift iOS Application for personal productivity use."
-      button:
-        enable: false
-        URL: "https://youtu.be/h2BfWyiYvrg"
-        title: "Music Video"
-    project_two:
-      enable: true
-      content: "Adding content & features to this website."
-      button:
-        enable: false
-        URL: "https://github.com/adrielp/SquawCreek"
-        title: "Github Project Files"
-    project_three:
-      enable: true
-      content: "Documenting my process on YouTube & Instagram."
-      button:
-        enable: false
-        URL: "/projects"
-        title: "Other Projects"
 
+# blog - content comes from content/blog
+blog:
+  enable : false
+  title : "Recent Blog Posts"
       
 
 # skill
@@ -207,9 +187,3 @@ clients_logo_slider:
       
     - logo : "images/clients-logo/client-logo-5.png"
       URL : "#"
-
-# blog
-blog:
-  enable : true
-  title : "Blogs"
-  # blog post comes from "content/blog" folder

@@ -30,9 +30,25 @@ html {
     }
 }
 
+.bg-ed-cover {
+    background-image: url(../../images/education-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .hero-image {
     /* background-image: url(../../images/education-bg.png); */
     /* background-color: grey-darker; */
     background-position: left top;
     background-size: cover;
     background-repeat: no-repeat; }
+
+.cd-img {
+    transition: transform .3s;
+}
+
+.cd-img:hover {
+    transform: scale(1.10);
+}

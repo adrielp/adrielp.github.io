@@ -8,200 +8,74 @@
   {{ if site.Data.homepage.story.enable }}
   <!-- <section id="myStory" class="section has-background-white" style="margin-top: 5%;"> -->
   <section id="myStory" class="section has-background-white" style="margin-top: 8%;">
-    <div class="heading has-text-black has-text-centered">
-        <h1 class="title">{{ site.Data.homepage.story.title }}</h1>
-    </div>
-    {{ with site.Data.homepage.story }}
     <div class="container">
-      <p class="has-text-black is-size-5 about-me">
-        {{ .content }}
-      </p>
-    </div>
-    {{ end }}
-    <br></br>
-    <div class="container has-text-centered">
-      <a class="button is-link" href="{{ site.Params.aboutPage | absURL }}">Get to know me!</a>
+      <div class="heading has-text-black has-text-centered">
+          <h1 class="title">{{ site.Data.homepage.story.title }}</h1>
+      </div>
+      {{ with site.Data.homepage.story }}
+      <div class="container has-text-left">
+        <p class="has-text-black is-size-5 about-me">
+          {{ .content }}
+        </p>
+      </div>
+      {{ end }}
+      <br></br>
+      <div class="container has-text-centered">
+        <a class="button is-link" href="{{ site.Params.aboutPage | absURL }}">Get to know me!</a>
+      </div>
     </div>
   </section>
   {{ end }}
 
-<!-- PROJECTS SECTIONS -->
-{{ if site.Data.homepage.projects.enable }}
-<section style="margin-top: 6%;">
-  <div class="h-c-bg ">
-      <div class="heading has-text-centered">
-          <p class="title is-l is-spaced ex-marg has-text-black">Recent Projects</p>
-      </div>
+  <!-- RECENT PROJECTS SECTION -->
+  {{ with site.Data.homepage.projects}}
+  {{ $projectPages := where site.RegularPages "Type" "in" site.Params.projectsSection }}
+  {{ if and ( site.Data.homepage.blog.enable ) ( site.Data.homepage.projects.enable ) }}
+  {{ $dotbg := "dot-bg"  }}
+  {{ else }}
+  {{ $dotbg := "" }}
+  <section id="projects" class="section has-background-white {{ $dotbg }} ">
+  {{ end }}
+  <!-- <section id="projects" class="section has-background-white"> -->
       <div class="container">
-          <div class="columns is-centered">
-              {{ if site.Data.homepage.projects.recent.project_one.enable }}
-              <div class="column">
-                <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                  <article class="media">
-                    <div class="media-content">
-                      <div class="content">
-                        <p>
-                          <!-- <br /> -->
-                          {{ site.Data.homepage.projects.recent.project_one.content }}
-                        </p>
-                      </div>
-                      {{ if site.Data.homepage.projects.recent.project_one.button.enable }}
-                      <nav class="level is-mobile">
-                        <div class="is-centered">
-                          <a class="button is-link" href="{{ site.Data.homepage.projects.recent.project_one.button.URL | absURL }}">{{ site.Data.homepage.projects.recent.project_one.button.title }}</a>
-                        </div>
-                      </nav>
-                      {{ end }}
-                    </div>
-                  </article>
-                </div>
-              </div>
-              {{ end }}
-              
-              {{ if site.Data.homepage.projects.recent.project_two.enable }}
-              <div class="column">
-                <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                  <article class="media">
-                    <div class="media-content">
-                      <div class="content">
-                        <p class="is-small is-centered">
-                          <!-- <br /> -->
-                          {{ site.Data.homepage.projects.recent.project_two.content }}
-                        </p>
-                      </div>
-                      {{ if site.Data.homepage.projects.recent.project_two.button.enable }}
-                      <nav class="level is-mobile">
-                        <div class="level-left">
-                          <a class="button is-link" href="{{ site.Data.homepage.projects.recent.project_two.button.URL | absURL }}">{{ site.Data.homepage.projects.recent.project_two.button.title }}</a>
-                        </div>
-                      </nav>
-                      {{ end }}
-                    </div>
-                  </article>
-                </div>
-              </div>
-              {{ end }}
-
-              {{ if site.Data.homepage.projects.recent.project_three.enable }}
-              <div class="column">
-                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                      <article class="media">
-                          <div class="media-content">
-                              <div class="content">
-                                  <p class="is-small is-centered">
-                                      <!-- <br /> -->
-                                      {{ site.Data.homepage.projects.recent.project_three.content }}
-                                      <!-- <br /> -->
-                                  </p>
-                              </div>
-                              {{ if site.Data.homepage.projects.recent.project_three.button.enable }}
-                              <nav class="level is-mobile">
-                                  <div class="level-left">
-                                      <a class="button is-link" href="{{ site.Data.homepage.projects.recent.project_three.button.URL }}">{{ site.Data.homepage.projects.recent.project_three.button.title }}</a>
-                                  </div>
-                              </nav>
-                              {{ end }}
-                          </div>
-                      </article>
-                  </div>
-                {{ end }}
-              </div>
-          </div>
+      <div class="heading has-text-black has-text-centered" style="margin-bottom: 5rem; margin-top: 5rem;">
+        <h1 class="title">{{ .title | markdownify }}</h1>
       </div>
-      
-      <div class="heading has-text-white has-text-centered" style="margin-top: 6%;">
-        <p class="title is-l is-spaced ex-marg has-text-black">Upcoming Projects</p>
-      </div>  
-      <div class="container">
-          <div class="columns is-centered">
-              {{ if site.Data.homepage.projects.upcoming.project_one.enable }}
-              <div class="column">
-                <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                  <article class="media">
-                    <div class="media-content">
-                      <div class="content">
-                        <p>
-                          <!-- <br /> -->
-                          {{ site.Data.homepage.projects.upcoming.project_one.content }}
-                        </p>
-                      </div>
-                      {{ if site.Data.homepage.projects.upcoming.project_one.button.enable }}
-                      <nav class="level is-mobile">
-                        <div class="is-centered">
-                          <a class="button is-link" href="{{ site.Data.homepage.projects.upcoming.project_one.button.URL | absURL }}">{{ site.Data.homepage.projects.upcoming.project_one.button.title }}</a>
-                        </div>
-                      </nav>
-                      {{ end }}
-                    </div>
-                  </article>
-                </div>
-              </div>
-              {{ end }}
-              
-              {{ if site.Data.homepage.projects.upcoming.project_two.enable }}
-              <div class="column">
-                <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                  <article class="media">
-                    <div class="media-content">
-                      <div class="content">
-                        <p class="is-small is-centered">
-                          <!-- <br /> -->
-                          {{ site.Data.homepage.projects.upcoming.project_two.content }}
-                        </p>
-                      </div>
-                      {{ if site.Data.homepage.projects.upcoming.project_two.button.enable }}
-                      <nav class="level is-mobile">
-                        <div class="level-left">
-                          <a class="button is-link" href="{{ site.Data.homepage.projects.upcoming.project_two.button.URL | absURL }}">{{ site.Data.homepage.projects.upcoming.project_two.button.title }}</a>
-                        </div>
-                      </nav>
-                      {{ end }}
-                    </div>
-                  </article>
-                </div>
-              </div>
-              {{ end }}
-
-              {{ if site.Data.homepage.projects.upcoming.project_three.enable }}
-              <div class="column">
-                  <div class="box" style="margin-right: 1rem; margin-left: 1rem;">
-                      <article class="media">
-                          <div class="media-content">
-                              <div class="content">
-                                  <p class="is-small is-centered">
-                                      <!-- <br /> -->
-                                      {{ site.Data.homepage.projects.upcoming.project_three.content }}
-                                      <!-- <br /> -->
-                                  </p>
-                              </div>
-                              {{ if site.Data.homepage.projects.upcoming.project_three.button.enable }}
-                              <nav class="level is-mobile">
-                                  <div class="level-left">
-                                      <a class="button is-link" href="{{ site.Data.homepage.projects.upcoming.project_three.button.URL }}">{{ site.Data.homepage.projects.upcoming.project_three.button.title }}</a>
-                                  </div>
-                              </nav>
-                              {{ end }}
-                          </div>
-                      </article>
-                  </div>
-                {{ end }}
-              </div>
-          </div>
+      <div class="columns">
+        {{ range first 3 $projectPages }}
+        {{ .Render "project" }}
+        {{ end }}
       </div>
-      <div class="hero is-large is-bold" style="padding-top:3em; padding-bottom: 5em;">
-        <div class="hero-footer">
-          <div class="container is-centered">
-            <p class="title is-l has-text-white has-text-centered is-centered">Check Out My Other Projects</p>
-            <div class="buttons is-centered">
-              <a class="button is-large is-link has-text-centered"> Projects</a>
-            </div>
-          </div>
+      <div class="container is-centered" style="margin-top: 5rem;">
+        <div class="buttons is-centered">
+          <a class="button is-link has-text-centered">More Projects</a>
         </div>
       </div>
-  </div>
-</section>
-{{ end }}
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- RECENT BLOG POSTS SECTION -->
+  {{ with site.Data.homepage.blog}}
+  {{ $blogPages := where site.RegularPages "Type" "in" site.Params.blogSection }}
+  {{ if .enable}}
+  <section id="posts" class="section has-background-white">
+    <div class="container">
+      <div class="heading has-text-black has-text-centered" style="margin-bottom: 5rem; margin-top: 5rem; ">
+        <h1 class="title">{{ .title | markdownify }}</h1>
+      </div>
+      <div class="columns">
+        {{ range first 3 $blogPages }}
+        {{ .Render "post" }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  {{ end }}
 
+<!-- CONTACT ME SECTION -->
+  {{ partial "contact.html" }}
 
 </body>
   {{ partial "footer.html" . }}

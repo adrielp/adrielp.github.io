@@ -5,6 +5,7 @@ title: 'Adriel Perkins - DevOps, Dev, & Tech'
 MetaDataFormat: 'yaml'
 theme: "dev-resume-blog"
 author: "Adriel"
+summaryLength: "10"
 #  params
 
 params:
@@ -54,6 +55,8 @@ params:
     - link: images/avatar.svg
   position: "DevOps Engineer | Designer | Brand Strategist"
   aboutPage: "about"
+  blogSection: "blog"
+  projectsSection: "projects"
 
 
 menu:
