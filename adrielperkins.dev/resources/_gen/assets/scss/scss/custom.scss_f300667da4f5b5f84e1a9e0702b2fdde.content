@@ -111,7 +111,7 @@ html {
   -webkit-appearance: none;
   background-color: rgba(10, 10, 10, 0.2);
   border: none;
-  border-radius: 290486px;
+  border-radius: 0.7rem;
   cursor: pointer;
   pointer-events: auto;
   display: inline-block;
@@ -171,7 +171,7 @@ html {
 .control.is-loading::after, .select.is-loading::after, .loader, .button.is-loading::after {
   animation: spinAround 500ms infinite linear;
   border: 2px solid #C0C0C0;
-  border-radius: 290486px;
+  border-radius: 0.7rem;
   border-right-color: transparent;
   border-top-color: transparent;
   content: "";
@@ -1238,7 +1238,7 @@ a.box:active {
     box-shadow: none;
     pointer-events: none; }
   .button.is-rounded {
-    border-radius: 290486px;
+    border-radius: 0.7rem;
     padding-left: calc(1em + 0.25em);
     padding-right: calc(1em + 0.25em); }
 
@@ -1473,7 +1473,7 @@ a.box:active {
     height: auto;
     width: 100%; }
     .image img.is-rounded {
-      border-radius: 290486px; }
+      border-radius: 0.7rem; }
   .image.is-fullwidth {
     width: 100%; }
   .image.is-square img,
@@ -1623,7 +1623,7 @@ a.box:active {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
-  border-radius: 290486px;
+  border-radius: 0.7rem;
   display: block;
   height: 1rem;
   overflow: hidden;
@@ -2019,7 +2019,7 @@ a.box:active {
     .tag:not(body).is-delete:active {
       background-color: #dbdbdb; }
   .tag:not(body).is-rounded {
-    border-radius: 290486px; }
+    border-radius: 0.7rem; }
 
 a.tag:hover {
   text-decoration: underline; }
@@ -2113,7 +2113,7 @@ a.tag:hover {
 .number {
   align-items: center;
   background-color: whitesmoke;
-  border-radius: 290486px;
+  border-radius: 0.7rem;
   display: inline-flex;
   font-size: 1.25rem;
   height: 2em;
@@ -2217,7 +2217,7 @@ a.tag:hover {
     width: auto; }
 
 .input.is-rounded {
-  border-radius: 290486px;
+  border-radius: 0.7rem;
   padding-left: calc(calc(0.75em - 2px) + 0.375em);
   padding-right: calc(calc(0.75em - 2px) + 0.375em); }
 
@@ -2270,7 +2270,7 @@ a.tag:hover {
     right: 1.125em;
     z-index: 4; }
   .select.is-rounded select {
-    border-radius: 290486px;
+    border-radius: 0.7rem;
     padding-left: 1em; }
   .select select {
     cursor: pointer;
@@ -4232,9 +4232,9 @@ a.navbar-item,
   .pagination.is-rounded .pagination-next {
     padding-left: 1em;
     padding-right: 1em;
-    border-radius: 290486px; }
+    border-radius: 0.7rem; }
   .pagination.is-rounded .pagination-link {
-    border-radius: 290486px; }
+    border-radius: 0.7rem; }
 
 .pagination,
 .pagination-list {
@@ -4584,12 +4584,12 @@ label.panel-block {
   .tabs.is-toggle ul {
     border-bottom: none; }
   .tabs.is-toggle.is-toggle-rounded li:first-child a {
-    border-bottom-left-radius: 290486px;
-    border-top-left-radius: 290486px;
+    border-bottom-left-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
     padding-left: 1.25em; }
   .tabs.is-toggle.is-toggle-rounded li:last-child a {
-    border-bottom-right-radius: 290486px;
-    border-top-right-radius: 290486px;
+    border-bottom-right-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
     padding-right: 1.25em; }
   .tabs.is-small {
     font-size: 0.75rem; }

@@ -21,6 +21,7 @@ params:
           - link: "plugins/sass/bulma.sass"
   copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"
   logo: images/ap_logo_white.svg
+  darkLogo: images/ap-logo.svg
   author: "Adriel Perkins"
   first_name: "Adriel"
   social:
@@ -51,12 +52,12 @@ params:
   home: "Home"
   hero: 
     - link: images/new-hero.jpg
-  avatar:
-    - link: images/avatar.svg
+  avatar: "images/avatar.svg"
   position: "DevOps Engineer | Designer | Brand Strategist"
   aboutPage: "about"
   blogSection: "blog"
   projectsSection: "projects"
+  authorPhoto: "images/adriel.png"
 
 
 menu:
@@ -66,22 +67,22 @@ menu:
           name: "Home"
           weight: 1
         - identifier: about
-          URL: "about"
+          URL: "/about"
           name: "About"
           weight: 2
         - identifier: blog
-          URL: "blog"
+          URL: "/blog"
           name: "Blog"
           weight: 3
         - identifier: projects
-          URL: "projects"
+          URL: "/projects"
           name: "Projects"
           weight: 4
         - identifier: resume
-          URL: "resume"
+          URL: "/resume"
           name: "Resume"
           weight: 5
         - identifier: contact
-          URL: "contact"
+          URL: "/contact"
           name: "Contact"
           weight: 6

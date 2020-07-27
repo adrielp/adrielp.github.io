@@ -41,7 +41,7 @@ projects:
 
 # blog - content comes from content/blog
 blog:
-  enable : false
+  enable : true
   title : "Recent Blog Posts"
       
 

@@ -1,0 +1,45 @@
+{{ define "main" }}
+<!-- ABOUT PAGE -->
+<section class="hero is-large is-dark">
+  <div class="hero-body">
+      <div class="container has-text-left">
+          <br></br>
+          <h1 class="title has-text-light">{{ .Title }}</h1>
+      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column" style="margin-bottom: 15rem;">
+        {{ .Content }}
+      </div>
+      <div class="column is-relative" style="margin-top: -15rem;">
+        <div class="box">
+          <figure class="image">
+            <img class="is-rounded" src="{{ site.Params.authorPhoto | absURL }}"/>
+          </figure>          
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-half image is-3by1">
+            <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+          <div class="column">
+              {{ range .Data.Pages }}
+              {{ .Render "post" }}
+              {{ end }}
+          </div>
+      </div>
+    </div>
+  </section>
+{{ partial "contact.html"}}
+
+{{ end }}

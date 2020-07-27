@@ -20,6 +20,7 @@ $link: $ap-orange;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
+$radius-rounded: .7rem;
 
 $body-background-color: $ap-white;
 $control-border-width: 2px;
@@ -49,7 +50,6 @@ html {
     margin-right: 2rem;
 }
 
-
 .cd-img {
     transition: transform .3s;
 }
@@ -62,6 +62,10 @@ html {
     background-image: url(../../images/backgrounds/bg-dots.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.image {
+    
 }
 
 .curved-dot-bg {
