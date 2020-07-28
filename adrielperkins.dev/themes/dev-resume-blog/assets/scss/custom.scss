@@ -64,8 +64,10 @@ html {
     background-repeat: no-repeat;
 }
 
-.image {
-    
+@media only screen and (min-width: 1024px ) {
+    .is-pulled-ups {
+        margin-top: -5rem;
+    }
 }
 
 .curved-dot-bg {

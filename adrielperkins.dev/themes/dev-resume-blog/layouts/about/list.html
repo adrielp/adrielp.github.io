@@ -1,30 +1,73 @@
-{{ define "main" }}
 <!-- ABOUT PAGE -->
-<section class="hero is-large is-dark">
+{{ partial "head.html" . }}
+<section class="hero is-medium is-dark">
+  <nav class="navbar hero-head " role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{{ site.BaseURL }}">
+            {{ if site.Params.logo }}
+            <img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }} logo" width="130" height="auto" />
+            {{ else }}
+            <h3 class="text-black">{{site.Title}}</h3>
+            {{ end }}
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="myNavbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="myNavbar" class="navbar-menu">
+        <div class="navbar-end">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <a class="has-text-white navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </div>
+  </nav>
   <div class="hero-body">
-      <div class="container has-text-left">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-5">
           <br></br>
-          <h1 class="title has-text-light">{{ .Title }}</h1>
+          <p class="title has-text-light">{{ site.Data.about.intro.content_title }}</p>
+          <br>
+          <p class="subtitle has-text-light">{{ site.Data.about.intro.content_position }}</p>
+          <br>
+          <p class="subtitle has-text-light">{{ site.Data.about.intro.content_quirk | safeHTML }}</p>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column" style="margin-bottom: 15rem;">
-        {{ .Content }}
+      <div class="column is-5" style="margin-bottom: 25rem;">
       </div>
-      <div class="column is-relative" style="margin-top: -15rem;">
+      <div class="column is-relative" style="margin-top: -25rem;">
         <div class="box">
           <figure class="image">
-            <img class="is-rounded" src="{{ site.Params.authorPhoto | absURL }}"/>
+          <img class="is-rounded" src="{{ site.Params.authorPhoto | absURL }}"/>
           </figure>          
         </div>
-        <div class="columns is-centered">
-          <div class="column is-half image is-3by1">
-            <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
+        <!-- <div class="columns is-centered">
+          <div class="column is-half image is-3by1" style="margin-top: 2rem;">
+          <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
           </div>
-        </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="title has-text-black has-text-centered">What I've Done, And What I'm Doing.</h1>
+  </div>
+</section>
+<section class="section is-relative has-background-white dot-bg is-pulled-up">
+  <div class="container">
+    <div class="box">
+      <div class="content has-text-center has-text-black">
+        {{ .Content }}
       </div>
     </div>
   </div>
@@ -40,6 +83,5 @@
       </div>
     </div>
   </section>
-{{ partial "contact.html"}}
-
-{{ end }}
+{{ partial "contact.html" }}
+{{ partial "footer.html" }}

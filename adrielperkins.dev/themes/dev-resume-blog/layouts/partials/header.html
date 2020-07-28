@@ -14,8 +14,8 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="myNavbar" class="navbar-menu">
-            <div class="navbar-end">
+        <div id="myNavbar" class="navbar-menu is-dark">
+            <div class="navbar-end is-dark">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>

@@ -1,3 +1,10 @@
+intro:
+  enable: true
+  content_title: "Hey, I'm Adriel!" 
+  content_position: "I strive to share my knowledge, struggles, and successes with others while developing myself personally. \n
+  My hope is that others can benefit from them, and learn along side me via guides, case studies, snippets, and reviews. "
+  content_quirk: "Also, I love the outdoors &#9978;, playing tennis with my son &#127934;, herding chickens &#128020;, emojis in general &#128514;, and spending time with my wonderful family &#128104;&#8205;&#128105;&#8205;&#128102;."
+
 # work process
 work_process:
   enable : true
