@@ -67,13 +67,16 @@
   <div class="container">
     <div class="box">
       <div class="content has-text-center has-text-black">
-        {{ .Content }}
+        <p class="is-size-3">
+          {{ .Content }}
+        </p>
       </div>
     </div>
   </div>
 </section>
+
   <section class="section">
-    <div class="container">
+    <!-- <div class="container">
       <div class="columns">
           <div class="column">
               {{ range .Data.Pages }}
@@ -81,7 +84,7 @@
               {{ end }}
           </div>
       </div>
-    </div>
+    </div> -->
   </section>
 {{ partial "contact.html" }}
 {{ partial "footer.html" }}

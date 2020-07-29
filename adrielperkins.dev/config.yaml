@@ -86,6 +86,3 @@ menu:
           URL: "/contact"
           name: "Contact"
           weight: 6
-
-markup:
-  goldmark:
