@@ -70,6 +70,13 @@ html {
     }
 }
 
+.v-line {
+    border-left: 3px solid $link;
+    height: 100px;
+    position: relative;
+    left: 50%;
+}
+
 .curved-dot-bg {
     background-image: url(../../images/backgrounds/curves-bg.png);
     background-size: cover;

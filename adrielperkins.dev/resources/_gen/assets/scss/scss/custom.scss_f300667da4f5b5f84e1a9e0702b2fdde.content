@@ -23,6 +23,12 @@ html {
   .is-pulled-ups {
     margin-top: -5rem; } }
 
+.v-line {
+  border-left: 3px solid #F77D29;
+  height: 100px;
+  position: relative;
+  left: 50%; }
+
 .curved-dot-bg {
   background-image: url(../../images/backgrounds/curves-bg.png);
   background-size: cover;

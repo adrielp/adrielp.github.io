@@ -58,6 +58,8 @@ params:
   blogSection: "blog"
   projectsSection: "projects"
   authorPhoto: "images/adriel.png"
+  linkedin: "https://www.linkedin.com/in/aqperkins/"
+  youtube: "https://www.youtube.com/channel/UCMvC5sEUUx4U5CsM24Egmhg"
 
 
 menu:

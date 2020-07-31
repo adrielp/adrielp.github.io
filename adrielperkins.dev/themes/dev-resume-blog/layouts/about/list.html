@@ -41,7 +41,7 @@
   </div>
 </section>
 <section class="section">
-  <div class="container">
+  <div class="container mb-6">
     <div class="columns">
       <div class="column is-5" style="margin-bottom: 25rem;">
       </div>
@@ -51,38 +51,85 @@
           <img class="is-rounded" src="{{ site.Params.authorPhoto | absURL }}"/>
           </figure>          
         </div>
+        
         <!-- <div class="columns is-centered">
           <div class="column is-half image is-3by1" style="margin-top: 2rem;">
-          <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
+            <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
           </div>
         </div> -->
       </div>
     </div>
   </div>
-  <div class="container mt-6">
-    <h1 class="title has-text-black has-text-centered">What I've Done, And What I'm Doing.</h1>
+  <div class="container float">
+    <div class="columns is-mobile is-centered ">
+    </div>
+    <div class="columns is-mobile is-centered is-paddingless is-marginless ">
+        <div class="column is-narrow " id="">
+            <span class="icon is-large has-text-link ">
+                <a href="#social"><i class="fas fa-2x fa-angle-double-down "></i></a>
+            </span>
+        </div>
+    </div>
   </div>
 </section>
-<section class="section is-relative has-background-white dot-bg is-pulled-up">
-  <div class="container">
-    <div class="box">
-      <div class="content has-text-center has-text-black is-size-5">
-          {{ .Content }}
+<section class="section is-relative has-background-white is-pulled-up">
+  <div class="columns is-centered mt-6">
+    <div class="column is-half">
+      <h1 id="social" class="title has-text-black has-text-centered is-size-4">I spend a lot of my social time working on my YouTube channel
+        and sharing content on LinkedIn. Connect with me there!
+      </h1>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column has-text-centered is-narrow ">
+      <a class="button is-link" href="{{ site.Params.youtube | absURL }}">YouTube</a>
+    </div>
+    <div class="column has-text-centered is-narrow ">
+      <a class="button is-link" href="{{ site.Params.linkedin| absURL }}">LinkedIn</a>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column has-text-centered is-half">
+      <div class="has-text-centered is-narrow v-line"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-relative has-background-dark pb-8">
+  <div class="container mt-6">
+    <h1 id="social" class="title has-text-white has-text-centered mb-6">{{ site.Data.about.info.title }}</h1>
+  </div>
+  <div class="columns">
+    <div class="column is-6">
+      <div class="box">
+        <div class="content has-text-center has-text-black is-size-5">
+          {{ site.Data.about.info.content_one}}
+        </div>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="box">
+        <div class="content has-text-center has-text-black is-size-5">
+          {{ site.Data.about.info.content_two}}<br><br><br>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-  <section class="section">
-    <!-- <div class="container">
-      <div class="columns">
-          <div class="column">
-              {{ range .Data.Pages }}
-              {{ .Render "post" }}
-              {{ end }}
+<section class="section">
+  
+  <div class="container mt-6">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <div class="content has-text-center has-text-black is-size-5">
+            {{ site.Data.about.info.content_three}}
           </div>
+        </div>
       </div>
-    </div> -->
-  </section>
+    </div>
+  </div>
+</section>
 {{ partial "contact.html" }}
 {{ partial "footer.html" }}
