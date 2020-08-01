@@ -14,11 +14,11 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="myNavbar" class="navbar-menu is-dark">
+        <div id="myNavbar" class="navbar-menu has-text-white has-background-dark">
             <div class="navbar-end is-dark">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                <a class="has-text-white has-background-dark navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                 {{ end }}
             </div>
         </div>

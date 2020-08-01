@@ -1,20 +1,26 @@
 <div class="column">
-    <div class="card cd-img">
-        <div class="card-header-title is-centered">
+    <div class="card hover-wrapper cd-img">
+        <!-- <div class="card-header-title is-centered">
             <h2 class="title has-text-black"> {{ .Title }}</h2>
-        </div>
-        <!-- <div class="card-image">
-            <figure class="image is-4by3">
-                <img src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
-            </figure>
         </div> -->
-        <div class="card-content"> 
-            <p>
+        <figure class=" image is-4by3">
+            <img class="is-overlay" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+            <!-- <a class="button is-link is-hovered" href="{{ .Permalink }}">View Project</a> -->
+        </figure>
+        <div class="hover-overlay">
+            <div class="hover-content">
+                <a class="button is-link" href="{{ .Permalink | safeURL }}">View Project</a>
+            </div>
+        </div>
+        <!-- <div class="card-image mb-5">
+        </div> -->
+        <!-- <div class="card-content"> 
+            <div>
                 {{ .Summary | markdownify }}
-            </p>
-        </div>
-        <div class="has-text-centered" style="padding-bottom: 2rem;">
+            </div>
+        </div> -->
+        <!-- <div class="has-text-centered is-centered" style="padding-bottom: 2rem;">
             <a class="button is-link" href="{{ .Permalink }}">View Project</a>
-        </div>
+        </div> -->
     </div>
 </div>

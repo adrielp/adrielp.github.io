@@ -19,6 +19,40 @@ html {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.hover-wrapper {
+  overflow: hidden; }
+
+.hover-wrapper img {
+  transition: .3s ease;
+  transform: scale(1); }
+
+.hover-wrapper:hover img {
+  transform: scale(1); }
+
+.hover-wrapper:hover .hover-overlay {
+  opacity: 1;
+  visibility: visible; }
+
+.hover-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease; }
+
+.hover-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center; }
+
 @media only screen and (min-width: 1024px) {
   .is-pulled-ups {
     margin-top: -5rem; } }

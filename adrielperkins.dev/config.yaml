@@ -80,10 +80,10 @@ menu:
           URL: "/projects"
           name: "Projects"
           weight: 4
-        - identifier: resume
-          URL: "/resume"
-          name: "Resume"
-          weight: 5
+        # - identifier: resume
+        #   URL: "/resume"
+        #   name: "Resume"
+        #   weight: 5
         - identifier: contact
           URL: "/contact"
           name: "Contact"
