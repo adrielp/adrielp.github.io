@@ -51,12 +51,6 @@
           <img class="is-rounded" src="{{ site.Params.authorPhoto | absURL }}"/>
           </figure>          
         </div>
-        
-        <!-- <div class="columns is-centered">
-          <div class="column is-half image is-3by1" style="margin-top: 2rem;">
-            <img src="{{ site.Params.darkLogo | absURL }}" alt="{{ site.Title }} logo"  />
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -75,17 +69,17 @@
 <section class="section is-relative has-background-white is-pulled-up">
   <div class="columns is-centered mt-6">
     <div class="column is-half">
-      <h1 id="social" class="title has-text-black has-text-centered is-size-4">I spend a lot of my social time working on my YouTube channel
+      <h1 id="social" class="title has-text-black has-text-centered is-size-3">I spend a lot of my social time working on my YouTube channel
         and sharing content on LinkedIn. Connect with me there!
       </h1>
     </div>
   </div>
   <div class="columns is-centered">
     <div class="column has-text-centered is-narrow ">
-      <a class="button is-link" href="{{ site.Params.youtube | absURL }}">YouTube</a>
+      <a class="fab fa-3x fa-youtube is-link" href="{{ site.Params.youtube | absURL }}"></a>
     </div>
     <div class="column has-text-centered is-narrow ">
-      <a class="button is-link" href="{{ site.Params.linkedin| absURL }}">LinkedIn</a>
+      <a class="fab fa-3x fa-linkedin is-link" href="{{ site.Params.linkedin| absURL }}"></a>
     </div>
   </div>
   <div class="columns is-centered">
@@ -130,6 +124,11 @@
       </div>
     </div>
   </div>
+<div class="columns is-centered">
+  <div class="column has-text-centered is-half">
+    <div class="has-text-centered is-narrow v-line"></div>
+  </div>
+</div>
 </section>
 {{ partial "contact.html" }}
 {{ partial "footer.html" }}

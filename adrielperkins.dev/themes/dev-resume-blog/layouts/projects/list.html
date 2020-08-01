@@ -1,0 +1,99 @@
+<!-- PROJECTS PAGE -->
+{{ partial "head.html" . }}
+<section class="hero is-medium is-dark">
+    <nav class="navbar hero-head " role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="{{ site.BaseURL }}">
+              {{ if site.Params.logo }}
+              <img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }} logo" width="130" height="auto" />
+              {{ else }}
+              <h3 class="text-black">{{site.Title}}</h3>
+              {{ end }}
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="myNavbar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div id="myNavbar" class="navbar-menu">
+          <div class="navbar-end">
+              {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+              <a class="has-text-white navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+              {{ end }}
+          </div>
+      </div>
+    </nav>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-6 is-offset-1">
+            <p class="title has-text-light">{{ .Title}}</p>
+          </div>
+        </div>
+        <div class="columns mt-3">
+            <div class="column">
+                <i class="fab fa-css3-alt fa-3x"></i>
+                <i class="fab fa-html5 fa-3x"></i>
+                <i class="fab fa-sass fa-3x"></i>
+            </div>
+            <div class="column">
+                <i class="fab fa-js-square fa-3x"></i>
+                <i class="fab fa-java fa-3x"></i>
+                <i class="fab fa-python fa-3x fa-spin"></i>
+            </div>
+            <div class="column">
+            <i class="fab fa-aws fa-3x"></i>
+            <i class="fab fa-docker fa-3x"></i>
+                <i class="fab fa-adobe fa-3x"></i>
+            </div>
+        </div>
+        <div class="columns ">
+            <div class="column">
+                <i class="fab fa-jenkins fa-3x"></i>
+                <i class="fab fa-bootstrap fa-3x"></i>
+                <i class="fab fa-wordpress fa-3x fa-spin"></i>
+            </div>
+            <div class="column">
+                <i class="fab fa-github fa-3x fa-spin"></i>
+                <i class="fab fa-git fa-3x"></i>
+                <i class="fas fa-coffee fa-3x"></i>
+            </div>
+            <div class="column">
+                <i class="fab fa-php fa-3x"></i>
+                <i class="fab fa-swift fa-3x"></i>
+                <i class="fab fa-redhat fa-3x"></i>
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <div class="column">
+                <i class="fab fa-linux fa-3x"></i>
+                <i class="fab fa-centos fa-3x fa-spin"></i>
+                <i class="fab fa-node-js fa-3x fa-spin"></i>
+            </div>
+            <div class="column">
+                <i class="fab fa-raspberry-pi fa-3x"></i>
+                <i class="fab fa-confluence fa-3x"></i>
+                <i class="fas fa-database fa-3x"></i>
+            </div>
+            <div class="column">
+                <i class="fab fa-atlassian fa-3x"></i>
+                <i class="fas fa-atom fa-3x fa-spin"></i>
+                <i class="fab fa-galactic-republic fa-3x fa-spin"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+{{ partial "contact.html" }}
+{{ partial "footer.html" }}

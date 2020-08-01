@@ -2,7 +2,7 @@
     <nav class="level">
         <div class="level-left is-paddingless">
             {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
+            {{ range site.Menus.main }}
             <p class="level-item has-text-left{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
                 <a class="is-link has-text-white" href="{{ .URL }}">{{ .Name }}</a>
             </p>
@@ -23,4 +23,5 @@
     <div class="level">
         <p class="level-item level-left has-text-grey-lighter">&copy; {{ now.Format "2006" }} - {{ site.Params.author }}</p>
     </div>
+    <script async src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </footer>
