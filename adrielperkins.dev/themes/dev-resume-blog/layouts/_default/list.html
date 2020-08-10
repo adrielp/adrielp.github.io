@@ -1,13 +1,15 @@
 {{ define "main" }}
+{{ partial "page-title.html" . }}
   <!-- blog -->
   <section class="section">
     <div class="container">
       <div class="columns">
-          <div class="column">
-              {{ range .Data.Pages }}
-              {{ .Render "post" }}
-              {{ end }}
-          </div>
+        {{ range .Data.Pages }}
+        <div class="column">
+        {{ .Render "post" }}
+        </div>
+        {{ end }}
+
       </div>
     </div>
   </section>
