@@ -40,3 +40,14 @@ docker run --rm -it -v $(pwd):/src -p 1414:1313 klakegg/hugo:latest-ext new them
 # must change into site directory to run 
 docker run --rm -it -v $(pwd):/src -p 1414:1313 klakegg/hugo:latest-ext server
 ```
+
+
+# Startup commands
+**start docker first**
+```
+code Development/repos/apdev-hugo
+code Development/repos/Adriel_Developer_Portfolio_Website_BV && code Development/repos/hugo-trash
+cd adrielperkins.dev
+docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:latest-ext server
+docker run --rm -it -v $(pwd):/src klagegg/hugo:latest-ext new projects/project.md
+```
