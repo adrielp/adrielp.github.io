@@ -6,7 +6,18 @@
 
 <section class="section">
     <div class="container">
-
+        <div class="level">
+            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" />
+        </div>
+        <div class="level">
+            <h1 class="Sub-Title">
+                Date: {{ .PublishDate.Format "Jan 02, 2006" }}
+            </h1>
+        </div>
+    </div>
+    <div class="container content">
+        <!-- <h1 class="Title mt-3">{{ .Title }}</h1> -->
+        <p>{{ .Content }}</p>
     </div>
 
 

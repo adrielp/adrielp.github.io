@@ -7,7 +7,7 @@ Categories: []
 image: "images/projects/ap-resume.png"
 ---
 
-Original Personal Resume Website
+# Original Personal Resume Website
 
-A simple, static, responsive website.
-I originally created this website from scratch to review and enhance my CSS skills. I wanted to learn best practices while coding CSS and specifically approaching the site with a mobile first approach and without a framework. This was a great website just to display my online resume. Full files posted on my Github. 
+### A simple, static, responsive website.
+I originally created this website from scratch to review and enhance my CSS skills. I wanted to learn best practices while writing CSS; specifically approaching the site with a mobile first approach and without a framework. This was a great website just to display my online resume at the time. Repo for files can be found on my GitHub at  https://github.com/adrielp/resumeWebsite.

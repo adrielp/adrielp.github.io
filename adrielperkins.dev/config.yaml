@@ -60,6 +60,8 @@ params:
   authorPhoto: "images/adriel.png"
   linkedin: "https://www.linkedin.com/in/aqperkins/"
   youtube: "https://www.youtube.com/channel/UCMvC5sEUUx4U5CsM24Egmhg"
+  contact:
+    forms_action: "https://formspree.io/mvoweawe"
 
 
 menu:
@@ -72,10 +74,10 @@ menu:
           URL: "/about"
           name: "About"
           weight: 2
-        - identifier: blog
-          URL: "/blog"
-          name: "Blog"
-          weight: 3
+        # - identifier: blog
+        #   URL: "/blog"
+        #   name: "Blog"
+        #   weight: 3
         - identifier: projects
           URL: "/projects"
           name: "Projects"
