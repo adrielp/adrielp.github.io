@@ -1,0 +1,16 @@
+version: "3.8"
+
+
+services:
+
+  hugo:
+    image: klakegg/hugo:latest-ext
+    command: --api.insecure=true --providers.docker
+    container_name: "proxy"
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "443:443"
+    volumes: 
+      - "./volumes/letsencrypt:/letsencrypt"
+      - /var/run/docker.sock:/var/run/docker.sock

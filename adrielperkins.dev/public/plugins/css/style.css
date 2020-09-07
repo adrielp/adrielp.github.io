@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://use.typekit.net/ojp1vxz.css");
+html {
+    scroll-behavior: smooth;
+}
+
+.float {
+    animation: float 4s ease-in-out 0.5s infinite;
+    -webkit-animation: float 4s ease-in-out 0.5s infinite;
+    
+}
+@-webkit-keyframes float {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-35px);
+                transform: translateY(-35px);
+    }
+}
+@keyframes float {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-35px);
+                transform: translateY(-35px);
+    }
+}
+
+.bg-ed-cover {
+    background-image: url(../../images/education-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.hero-image {
+    /* background-image: url(../../images/education-bg.png); */
+    /* background-color: grey-darker; */
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+.cd-img {
+    transition: transform .3s;
+}
+
+.cd-img:hover {
+    transform: scale(1.10);
+}

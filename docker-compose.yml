@@ -2,15 +2,14 @@ version: "3.8"
 
 
 services:
+  nginx:
+    image: nginx:latest
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.adriel.rule=Host('adrielperkins.dev')"
+      - "traefik.http.routers.adriel.entrypoints=websecure"
+      - "treafik.http.routers.adriel.tls.certresolver=myhttpchallenge"
+    volumes:
+      - "./adrielperkins.dev:/usr/share/nginx/html:ro"
 
-  hugo:
-    image: klakegg/hugo:latest-ext
-    command: --api.insecure=true --providers.docker
-    container_name: "proxy"
-    ports:
-      - "80:80"
-      - "8080:8080"
-      - "443:443"
-    volumes: 
-      - "./volumes/letsencrypt:/letsencrypt"
-      - /var/run/docker.sock:/var/run/docker.sock
+
