@@ -20,6 +20,8 @@
     {{ $customStyle := resources.Get "scss/custom.scss" }}
     {{ $customStyle = $customStyle | toCSS   }}
     <link rel="stylesheet" href="{{ $customStyle.Permalink }}">
+    <!-- <link rel="stylesheet" href="{{ $customStyle | relURL }}"> -->
+    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}/{{ $customStyle }}"> -->
 
 
 

@@ -1,5 +1,5 @@
 # base configuration
-baseURL: 'https://adrielperkins.dev'
+baseURL: 'adrielperkins.docker.localhost'
 languageCode: 'en-us'
 title: 'Adriel Perkins - DevOps, Dev, & Tech'
 MetaDataFormat: 'yaml'
