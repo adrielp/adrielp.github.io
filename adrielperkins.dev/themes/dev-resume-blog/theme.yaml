@@ -5,15 +5,11 @@ name: Dev Resume Blog
 license: MIT
 licenselink: 'https://github.com/yourname/yourtheme/blob/master/LICENSE'
 description: ''
-homepage: 'adrielperkins.docker.localhost'
+homepage: 'adrielperkins.dev'
 tags: []
 features: []
 min_version: 0.41.0
 author:
   name: 'Adriel Perkins'
-  homepage: 'adrielperkins.docker.localhost'
+  homepage: 'adrielperkins.dev'
 
-original:
-  name: ''
-  homepage: ''
-  repo: ''

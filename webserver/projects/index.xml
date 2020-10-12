@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Adriel Perkins - DevOps, Dev, &amp; Tech</title>
+    <link>http://adriel.docker.localhost/projects/</link>
+    <description>Recent content in Projects on Adriel Perkins - DevOps, Dev, &amp; Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Jul 2020 19:09:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://adriel.docker.localhost/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flightone Shop</title>
+      <link>http://adriel.docker.localhost/projects/flightone-shop/</link>
+      <pubDate>Mon, 10 Aug 2020 03:28:46 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/flightone-shop/</guid>
+      <description>FlightOne Store Website The E-Commerce SubDomain Site for FlightOne. This website served as the E-Commerce website for FlightOne.</description>
+    </item>
+    
+    <item>
+      <title>Flightone Website</title>
+      <link>http://adriel.docker.localhost/projects/flightone-website/</link>
+      <pubDate>Mon, 10 Aug 2020 03:28:09 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/flightone-website/</guid>
+      <description>FlightOne Main Website A MultiDomain WordPress Website. This website was created for a company called Code Orange, INC dba FlightOne.</description>
+    </item>
+    
+    <item>
+      <title>AP Resume Original Site</title>
+      <link>http://adriel.docker.localhost/projects/ap-resume/</link>
+      <pubDate>Mon, 10 Aug 2020 03:25:34 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/ap-resume/</guid>
+      <description>Original Personal Resume Website A simple, static, responsive website. I originally created this website from scratch to review and enhance my CSS skills.</description>
+    </item>
+    
+    <item>
+      <title>ImagineWise LLC</title>
+      <link>http://adriel.docker.localhost/projects/imaginewise/</link>
+      <pubDate>Sun, 26 Jul 2020 18:39:30 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/imaginewise/</guid>
+      <description>Imagine Wise Website As owner of ImagineWise, I designed and developed this company website for people to learn more about the company and the services we offer.</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET E-Commerce</title>
+      <link>http://adriel.docker.localhost/projects/asp-net-ecommerce/</link>
+      <pubDate>Sun, 26 Jul 2020 18:39:23 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/asp-net-ecommerce/</guid>
+      <description>An ASP.NET 4.6 E-Commerce website. This website project was created on a team of 6 individuals over the course of 6 weeks.</description>
+    </item>
+    
+    <item>
+      <title>Agency Website Template</title>
+      <link>http://adriel.docker.localhost/projects/agencywebsitetemplate/</link>
+      <pubDate>Sun, 26 Jul 2020 18:39:20 +0000</pubDate>
+      
+      <guid>http://adriel.docker.localhost/projects/agencywebsitetemplate/</guid>
+      <description>Agency Website Template A static, clean, Agency template website. This website project enhanced two sets of skills.</description>
+    </item>
+    
+  </channel>
+</rss>

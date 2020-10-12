@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang=" {{ with site.LanguageCode }} {{ . }} {{ else }} en-US {{ end }} ">
 <!-- PROJECTS PAGE -->
 {{ partial "head.html" . }}
 <section class="hero is-medium is-dark">
@@ -56,12 +58,6 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
 {{ partial "contact.html" }}
 {{ partial "footer.html" }}
+</html>

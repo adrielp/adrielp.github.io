@@ -18,7 +18,7 @@
             <div class="navbar-end is-dark">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <a class="has-text-white has-background-dark navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                <a class="has-text-white has-background-dark navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL | absURL }}" title="{{ .Title }}">{{ .Name }}</a>
                 {{ end }}
             </div>
         </div>

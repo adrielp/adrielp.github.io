@@ -1,5 +1,7 @@
 # base configuration
-baseURL: 'adrielperkins.docker.localhost'
+baseURL: 'https://adrielperkins.dev'
+# baseURL: 'http://adriel.docker.localhost'
+# baseURL: '/'
 languageCode: 'en-us'
 title: 'Adriel Perkins - DevOps, Dev, & Tech'
 MetaDataFormat: 'yaml'
@@ -15,12 +17,12 @@ params:
           # - link: jquery-3.5.1.min.js 
           - link: js/site.js
       css:
-          - link: "plugins/css/style.css"
+          - link: "plugins/css/main.css"
           # - link: "plugins/css/custom.css"
       sass: 
           - link: "plugins/sass/bulma.sass"
   copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"
-  logo: images/ap_logo_white.svg
+  logo: images/ap_logo_white.png
   darkLogo: images/ap-logo.svg
   author: "Adriel Perkins"
   first_name: "Adriel"

@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 
 services:
@@ -11,12 +11,12 @@ services:
       - "443:443"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.adriel.rule=Host(`adrielperkins.docker.localhost`)"
+      - "traefik.http.routers.adriel.rule=Host(`adriel.docker.localhost`)"
       # - "traefik.http.routers.adriel.entrypoints=websecure"
       # - "treafik.http.routers.adriel.tls.certresolver=myhttpchallenge"
     # ports:
     #   - "9090:80"
-    # volumes:
-    #   - "/Users/adriel/Development/repos/apdev-hugo/adrielperkins.dev/public:/usr/share/nginx/html:ro"
+    volumes:
+      - "../adrielperkins.dev/public:/usr/share/nginx/html:ro"
     #   - "/Users/adriel/Development/repos/apdev-hugo/adrielperkins.dev:/etc/nginx"
 
