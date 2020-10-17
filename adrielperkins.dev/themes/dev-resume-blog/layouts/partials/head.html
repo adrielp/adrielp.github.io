@@ -9,11 +9,10 @@
     </script>
     {{ hugo.Generator }}
     <!-- IMPORTANT STYLE SHEET -->
-    <style type="text/css">
-        {{ $customStyle := resources.Get "scss/main.scss" }}
-        {{ $customStyle = $customStyle | toCSS | minify  }}
-        <link  href="{{ $customStyle.Permalink | safeURL }}" rel="stylesheet">
-    </style>
+    {{ $customStyle := resources.Get "scss/main.scss" }}
+    {{ $customStyle = $customStyle | toCSS | minify  }}
+    <link  href="{{ $customStyle.Permalink | safeURL }}" rel="preload" as="style">
+    <noscript><link  href="{{ $customStyle.Permalink | safeURL }}" rel="stylesheet"></noscript>
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/12f5406328.js" async defer crossorigin="anonymous"></script>
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
