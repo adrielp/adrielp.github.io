@@ -2,31 +2,22 @@
 
 name: Build and Deploy Site
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: macos-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Install Hugo
         run: brew install hugo
 
-      # Runs a set of commands using the runners shell
       - name: Build Site
         run: |
           cd $GITHUB_WORKSPACE/adrielperkins.dev
@@ -47,7 +38,7 @@ jobs:
           name: public.tar 
           path: public.tar
 
-      - name: CD Home
+      - name: Reset To Home Directory 
         run: |
           cd ~
 
@@ -59,5 +50,14 @@ jobs:
           SOURCE: adrielperkins.dev/public 
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-          
+          TARGET: ${{ secrets.SITE_TARGET }}
+
+      - name: Deploy WebServer
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzv0 --delete"
+          SOURCE: webserver/ 
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.WEB_SERVER_TARGET }}
