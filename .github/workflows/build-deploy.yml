@@ -24,15 +24,6 @@ jobs:
           name: public.tar 
           path: public.tar
 
-      - name: Destroy Public Folder On Server
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            rm -rf adrielperkins.dev/public
-          host: ${{ secrets.REMOTE_HOST }}
-          user: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-
       - name: Deploy Site To Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
