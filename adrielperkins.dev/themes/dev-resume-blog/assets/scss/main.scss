@@ -126,6 +126,16 @@ html {
     background-position: top;
 }
 
+//css menu
+
+#nav-toggle-state {
+    display: none;
+}
+
+#nav-toggle-state:checked ~ .navbar-menu {
+    display: block;
+}
+
 //arrow floating
 .float {
     animation: float 4s ease-in-out 0.5s infinite;
