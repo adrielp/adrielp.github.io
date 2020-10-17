@@ -32,19 +32,28 @@ jobs:
           cd $GITHUB_WORKSPACE/adrielperkins.dev
           hugo -e production --minify --cleanDestinationDir
 
-      - name: List Directory
+      - name: List Contents
         run: |
           cd $GITHUB_WORKSPACE/adrielperkins.dev
           ls -alt
           ls -altr public/
 
-      - name: Tar Public Folder
+      - name: Tar Public Folder For Archive
         run: |
           tar -cvf public.tar $GITHUB_WORKSPACE/adrielperkins.dev/public
 
       - uses: actions/upload-artifact@v2
         with:
-          name: archive tar 
-          path: public.tar 
+          name: public.tar 
+          path: public.tar
 
+      - name: Deploy Site To Server
+        uses: easingthemese/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzv0 --delete"
+          SOURCE: $GITHUB_WORKSPACE/adrielperkins.dev/public 
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
           
