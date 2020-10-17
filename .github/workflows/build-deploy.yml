@@ -41,6 +41,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: published-site
-          path: $GITHUB_WORKSPACE/adrielperkins.dev/public
+          path: $GITHUB_WORKSPACE/adrielperkins.dev/public/
 
           
