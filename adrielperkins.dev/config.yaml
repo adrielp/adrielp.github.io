@@ -18,7 +18,6 @@ params:
           - link: js/site.js
       css:
           - link: "plugins/css/main.css"
-          # - link: "plugins/css/custom.css"
       sass: 
           - link: "plugins/sass/bulma.sass"
   copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"

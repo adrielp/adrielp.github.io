@@ -1,53 +1,36 @@
-# hugo-dev-site
+# Adriel Perkins Developer Website - Built Using GoHugo.io
 
-# Hugo + Docker Setup
+## Development Setup
+1. Install Hugo server
+```
+brew install hugo
+```
+2. Clone down repo
+3. Navigate to `adrielperkins.dev/`
+4. Call hugo server
+```
+hugo server
+```
+5. Navigate to `localhost:1313` to see the site in your browser.
 
-1. Pull down the docker image
-    1. `docker pull klakegg/hugo:latest-ext`
-    2. Make sure to pull down the -ext version if planning on using SCSS - etc. 
-    3. Run container as server
-**runs the server**
+## To Publish
+1. Navigate to `adrielperkins.dev`
+2. Run the following commands to build the site
 ```
-docker run --rm -it \
--v $(pwd):/src \
--p 1313:1313 \
-klakegg/Hugo:latest-ext \
-server
+hugo -e production --minify --cleanDestinationDir
 ```
-**runs the container and creates a new website**
+> Currently, I'm pushing to "production" by doing the following set of commands:
 ```
-# note - this command run outside of the directory
-docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:latest-ext new site adrieldev
-docker run --rm -it -v $(pwd):/src -p 1414:1313 klakegg/hugo:latest-ext new site adrieldev
-#####OUTPUT#####
-Just a few more steps and you're ready to go:
-
-1. Download a theme into the same-named folder.
-   Choose a theme from https://themes.gohugo.io/ or
-   create your own with the "hugo new theme <THEMENAME>" command.
-2. Perhaps you want to add some content. You can add single files
-   with "hugo new <SECTIONNAME>/<FILENAME>.<FORMAT>".
-3. Start the built-in live server via "hugo server".
+hugo -e production --minify --cleanDestinationDir; \
+   zip -r public.zip public/; \
+   scp public.zip adriel@142.11.236.177:~/public.zip
 ```
-
-**runs the container and creates a new theme**
+> Then I SSH to the server and run the following set of commands:
 ```
-# must change into site directory to run 
-docker run --rm -it -v $(pwd):/src -p 1414:1313 klakegg/hugo:latest-ext new theme dev-blog
+rm -rf adrielperkins.dev/public/ \
+   && unzip public.zip -d adrielperkins.dev/ \
+   && docker-compose -f docker-compose.new-ap-dev.yml build; \
+   docker-compose -f docker-compose.new-ap-dev.yml up -d; \
+   docker-compose -f docker-compose.new-ap-dev.yml logs -f
 ```
-**runs the container as a server**
-```
-# must change into site directory to run 
-docker run --rm -it -v $(pwd):/src -p 1414:1313 klakegg/hugo:latest-ext server
-```
-
-
-# Startup commands
-**start docker first**
-```
-code Development/repos/apdev-hugo
-code Development/repos/Adriel_Developer_Portfolio_Website_BV && code Development/repos/hugo-trash
-cd adrielperkins.dev
-docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:latest-ext server
-docker run --rm -it -v $(pwd):/src klagegg/hugo:latest-ext new projects/project.md
-```
+> NOTE: Make sure to edit the config.yaml before running publish commands to point to the correct baseURL
