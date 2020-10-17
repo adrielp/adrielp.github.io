@@ -38,9 +38,13 @@ jobs:
           ls -alt
           ls -altr public/
 
+      - name: Tar Public Folder
+        run: |
+          tar -cvf public.tar $GITHUB_WORKSPACE/adrielperkins.dev/public
+
       - uses: actions/upload-artifact@v2
         with:
-          name: published-site
-          path: $GITHUB_WORKSPACE/adrielperkins.dev/public/*
+          name: archive tar 
+          path: public.tar 
 
           
