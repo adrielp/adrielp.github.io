@@ -21,7 +21,7 @@ params:
       sass: 
           - link: "plugins/sass/bulma.sass"
   copyright: "copyright &copy; 2020 - Adriel Perkins - All Rights Reserved"
-  logo: images/ap_logo_white.png
+  logo: images/ap_logo_white.svg
   darkLogo: images/ap-logo.svg
   author: "Adriel Perkins"
   first_name: "Adriel"
@@ -58,7 +58,7 @@ params:
   aboutPage: "about"
   blogSection: "blog"
   projectsSection: "projects"
-  authorPhoto: "images/adriel.jpg"
+  authorPhoto: "images/adriel.jpf"
   linkedin: "https://www.linkedin.com/in/aqperkins/"
   youtube: "https://www.youtube.com/channel/UCMvC5sEUUx4U5CsM24Egmhg"
   contact:
