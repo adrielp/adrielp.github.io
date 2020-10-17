@@ -62,6 +62,8 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.WEB_SERVER_TARGET }}
 
+  deploy:
+    runs-on: ubuntu-latest
       - name: Recreate Site On Server
         uses: fifsky/ssh-action@master
         with:
