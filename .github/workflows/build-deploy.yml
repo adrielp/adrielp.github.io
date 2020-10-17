@@ -70,7 +70,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd webserver
+            mv webserver/docker-compose.prod.yaml /home/adriel/docker-compose.prod.yaml
             docker-compose -f docker-compose.prod.yaml build 
             docker-compose -f docker-compose.prod.yaml up -d 
           host: ${{ secrets.REMOTE_HOST }}
