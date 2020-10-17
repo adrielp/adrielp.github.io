@@ -31,4 +31,10 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/adrielperkins.dev
           hugo -e production --minify --cleanDestinationDir
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: published-site
+          path: $GITHUB_WORKSPACE/adrielperkins.dev/public
+
           
