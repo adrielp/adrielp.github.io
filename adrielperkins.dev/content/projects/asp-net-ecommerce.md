@@ -4,7 +4,7 @@ date: 2020-07-26T18:39:23Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/squawcreek.jpf"
+image: "images/projects/squawcreek.jpg"
 link: ""
 ---
 

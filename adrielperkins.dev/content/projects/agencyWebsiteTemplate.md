@@ -4,7 +4,7 @@ date: 2020-07-26T18:39:20Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/agencyStaticSite.jpf"
+image: "images/projects/agencyStaticSite.jpg"
 ---
 
 # Agency Website Template

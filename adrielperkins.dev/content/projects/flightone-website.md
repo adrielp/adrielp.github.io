@@ -1,10 +1,10 @@
 ---
 title: "Flightone Website"
-date: 2020-08-10T03:28:09Z
+gdate: 2020-08-10T03:28:09Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/fl1-home.jpf"
+image: "images/projects/fl1-home.jpg"
 ---
 
 # FlightOne Main Website
