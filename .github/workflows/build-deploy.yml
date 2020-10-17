@@ -32,6 +32,12 @@ jobs:
           cd $GITHUB_WORKSPACE/adrielperkins.dev
           hugo -e production --minify --cleanDestinationDir
 
+      - name: List Directory
+        run: |
+          cd $GITHUB_WORKSPACE/adrielperkins.dev
+          ls -alt
+          ls -altr public/
+
       - uses: actions/upload-artifact@v2
         with:
           name: published-site
