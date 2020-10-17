@@ -1,4 +1,5 @@
 # base configuration
+# change these depending on environment (ie. if testing locally)
 baseURL: 'https://adrielperkins.dev'
 # baseURL: 'http://adriel.docker.localhost'
 languageCode: 'en-us'
