@@ -64,6 +64,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    steps:
       - name: Recreate Site On Server
         uses: fifsky/ssh-action@master
         with:
