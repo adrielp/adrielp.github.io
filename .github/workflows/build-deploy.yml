@@ -47,12 +47,16 @@ jobs:
           name: public.tar 
           path: public.tar
 
+      - name: CD Home
+        run: |
+          cd ~
+
       - name: Deploy Site To Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzv0 --delete"
-          SOURCE: ../public 
+          SOURCE: adrielperkins.dev/public 
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
