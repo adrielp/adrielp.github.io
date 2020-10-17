@@ -11,7 +11,7 @@
     <!-- IMPORTANT STYLE SHEET -->
     {{ $customStyle := resources.Get "scss/main.scss" }}
     {{ $customStyle = $customStyle | toCSS | minify  }}
-    <link  href="{{ $customStyle.Permalink | safeURL }}" rel="preload" as="style">
+    <link  href="{{ $customStyle.Permalink | safeURL }}" rel="stylesheet" >
     <noscript><link  href="{{ $customStyle.Permalink | safeURL }}" rel="stylesheet"></noscript>
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/12f5406328.js" async defer crossorigin="anonymous"></script>
