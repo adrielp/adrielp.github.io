@@ -9,13 +9,12 @@
                 <h3 class="text-black">{{site.Title}}</h3>
                 {{ end }}
             </a>
-            <a role="button" class="navbar-burger nav-toggle" for="nav-toggle-state" aria-label="menu" aria-expanded="false" data-target="myNavbar">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="myNavbar">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <input type="checkbox" id="nav-toggle-state" />
         <div id="myNavbar" class="navbar-menu">
             <div class="navbar-end">
                 {{ $currentPage := . }}
