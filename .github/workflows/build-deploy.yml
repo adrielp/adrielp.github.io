@@ -63,6 +63,7 @@ jobs:
           TARGET: ${{ secrets.WEB_SERVER_TARGET }}
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Recreate Site On Server
