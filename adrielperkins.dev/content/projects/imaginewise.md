@@ -4,7 +4,7 @@ date: 2020-07-26T18:39:30Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/imaginewise.png"
+image: "images/projects/imaginewise.jpf"
 ---
 
 # Imagine Wise Website 

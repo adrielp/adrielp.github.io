@@ -4,7 +4,7 @@ date: 2020-08-10T03:28:46Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/fl1-shop-home.png"
+image: "images/projects/fl1-shop-home.jpf"
 ---
 
 # FlightOne Store Website

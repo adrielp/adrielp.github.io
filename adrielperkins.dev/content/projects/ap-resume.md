@@ -4,7 +4,7 @@ date: 2020-08-10T03:25:34Z
 Description: ""
 Tags: []
 Categories: []
-image: "images/projects/ap-resume.png"
+image: "images/projects/ap-resume.jpf"
 ---
 
 # Original Personal Resume Website
