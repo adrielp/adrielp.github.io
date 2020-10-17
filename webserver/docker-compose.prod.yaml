@@ -1,0 +1,16 @@
+version: "3.7"
+
+
+services:
+  nginx:
+    build:
+      context: "./adrielperkins.dev/"
+    image: nginx:latest
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.adriel.rule=Host(`adrielperkins.dev`)"
+      - "traefik.http.routers.adriel.entrypoints=websecure"
+      - "traefik.http.routers.adriel.tls.certresolver=myhttpchallenge"
+    volumes:
+      - "./adrielperkins.dev/public:/usr/share/nginx/html:ro"
+

@@ -1,0 +1,16 @@
+version: "3.7"
+
+
+services:
+  nginx:
+    build:
+      context: "."
+    image: nginx:latest
+    ports:
+      - "80:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.adriel.rule=Host(`adriel.docker.localhost`)"
+    volumes:
+      - "../adrielperkins.dev/public:/usr/share/nginx/html:ro"
+
