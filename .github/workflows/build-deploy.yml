@@ -19,7 +19,7 @@ jobs:
         run: |
           tar -cvf public.tar $GITHUB_WORKSPACE/adrielperkins.dev/public
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: public.tar 
           path: public.tar
