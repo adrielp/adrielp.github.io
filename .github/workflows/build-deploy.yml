@@ -25,7 +25,7 @@ jobs:
           path: public.tar
 
       - name: Deploy Site To Server
-        uses: easingthemes/ssh-deploy@v4.1.9
+        uses: easingthemes/ssh-deploy@v5.1.1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzv0 --delete"
@@ -35,7 +35,7 @@ jobs:
           TARGET: ${{ secrets.SITE_TARGET }}
 
       - name: Deploy WebServer
-        uses: easingthemes/ssh-deploy@v4.1.9
+        uses: easingthemes/ssh-deploy@v5.1.1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzv0 --delete"
